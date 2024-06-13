@@ -63,11 +63,16 @@ class NavBar extends StatelessWidget {
               ),
                 const Divider(),
 
-                const ListTile(
+                GestureDetector(
+                    onTap: () => Navigator.pushNamed(context, "/home"),
+                    child:
+                    Consumer<UserDataProvider>(builder: (context, value, child) {
+                      return const ListTile(
 
-
-                  leading: Icon(Icons.group_outlined),
-                  title: Text("New Group"),
+                        leading: Icon(Icons.chat_outlined),
+                        title: Text("Chats"),
+                      );
+                    })
                 ),
                 const ListTile(
                   leading: Icon(Icons.contacts_outlined),

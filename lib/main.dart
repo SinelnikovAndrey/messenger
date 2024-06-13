@@ -149,8 +149,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         routes: {
-          // "/": (context) => CheckUserSessions(),
-          "/": (context) => const HomePage(),
+          "/": (context) => CheckUserSessions(), //
+          // "/": (context) => const HomePage(), // Без OTP аутентификации
           "/login": (context) => const PhoneLogin(),
           "/home": (context) => const HomePage(),
           "/chat": (context) => const ChatPage(),
